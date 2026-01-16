@@ -170,6 +170,11 @@
     <commons.jacoco.lineRatio>0.96</commons.jacoco.lineRatio>
     <commons.jacoco.complexityRatio>0.91</commons.jacoco.complexityRatio>
     <commons.text.version>1.14.0</commons.text.version>
+    <!-- SonarCloud -->
+    <sonar.projectKey>commons-lang</sonar.projectKey>
+    <sonar.organization>gabrielsoaressn</sonar.organization>
+    <sonar.host.url>https://sonarcloud.io</sonar.host.url>
+    <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
   </properties>
 
   <build>
@@ -528,6 +533,32 @@
         <heapSize>-Xmx1024m</heapSize>
         <systemProperties>-Dtest.large.heap=true</systemProperties>
       </properties>
+    </profile>
+    <profile>
+      <id>coverage</id>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.jacoco</groupId>
+            <artifactId>jacoco-maven-plugin</artifactId>
+            <executions>
+              <execution>
+                <id>prepare-agent</id>
+                <goals>
+                  <goal>prepare-agent</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>report</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>report</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
     </profile>
   </profiles>
   <developers>
