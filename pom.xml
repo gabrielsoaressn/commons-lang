@@ -171,7 +171,7 @@
     <commons.jacoco.complexityRatio>0.91</commons.jacoco.complexityRatio>
     <commons.text.version>1.14.0</commons.text.version>
     <!-- SonarCloud -->
-    <sonar.projectKey>commons-lang</sonar.projectKey>
+    <sonar.projectKey>gabrielsoaressn_commons-lang</sonar.projectKey>
     <sonar.organization>gabrielsoaressn</sonar.organization>
     <sonar.host.url>https://sonarcloud.io</sonar.host.url>
     <sonar.coverage.jacoco.xmlReportPaths>${project.build.directory}/site/jacoco/jacoco.xml</sonar.coverage.jacoco.xmlReportPaths>
@@ -554,6 +554,11 @@
                 <goals>
                   <goal>report</goal>
                 </goals>
+                <configuration>
+                  <formats>
+                    <format>XML</format>
+                  </formats>
+                </configuration>
               </execution>
             </executions>
           </plugin>
