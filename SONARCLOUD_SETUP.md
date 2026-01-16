@@ -85,14 +85,17 @@ O workflow `.github/workflows/sonarcloud.yml` executa automaticamente:
 
 ## Visualizar Resultados
 
-1. Acesse https://sonarcloud.io
-2. Selecione seu projeto
-3. Visualize:
+1. Acesse https://sonarcloud.io/project/overview?id=commons-lang
+2. Ou navegue manualmente:
+   - Acesse https://sonarcloud.io
+   - Selecione seu projeto `commons-lang`
+3. Visualize as métricas:
    - **Coverage**: Cobertura de testes
    - **Code Smells**: Problemas de qualidade
    - **Bugs**: Possíveis bugs
    - **Security Hotspots**: Problemas de segurança
    - **Duplications**: Código duplicado
+   - **Maintainability**: Índice de manutenibilidade
 
 ## Configurações do JaCoCo
 
